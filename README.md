@@ -1,3 +1,4 @@
+![build status](https://travis-ci.org/erlend/active_model_serializers_vuetables.svg?branch=master)
 # ActiveModel Serializers Vue Tables
 
 The name pretty much says it all. This adapter for
