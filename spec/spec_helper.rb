@@ -22,6 +22,10 @@ end
 
 class Book < ActiveRecord::Base
   belongs_to :author
+
+  def self.total_count
+    unscope(:limit).count
+  end
 end
 
 class BookSerializer < ActiveModel::Serializer

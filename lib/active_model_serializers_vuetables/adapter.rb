@@ -5,9 +5,8 @@ module ActiveModelSerializersVuetables
       data = {}
       collection = serializer.object
 
-      if collection.is_a? ActiveRecord::Relation
-        collection = collection.unscope(:limit, :offset)
-        data[:count] = collection.count
+      if collection.respond_to?(:total_count)
+        data[:count] = collection.total_count
       end
 
       super.merge(data)
